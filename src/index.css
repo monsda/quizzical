@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    background-color: #F5F7FB;
+}
+
+
+.btn {
+    background-color: #4D5B9E;
+    border-radius: 15px;
+    width: 193px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F5F7FB;
+}
