@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import AllQuestion from './components/allQuestion'
+import yellowCircle from './assets/yellowCircle.svg'
+import blueCircle from './assets/blueCircle.svg'
 
 import './index.css'
 
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <main>
-      <img src="/yellowCircle.svg" alt="Yellow cricle" className='absolute w-20vw right-0'/>
+      <img src={yellowCircle} alt="Yellow cricle" className='absolute w-20vw right-0'/>
       {isGameStart ? 
           <AllQuestion setGameHandle={setGameHandle} /> 
       : 
@@ -31,7 +33,7 @@ function App() {
           </button>
         </section>
       }
-      <img src="/blueCircle.svg" alt="Blue cricle" className='absolute w-18vw bottom-0'/>
+      <img src={blueCircle} alt="Blue cricle" className='absolute w-18vw bottom-0'/>
     </main>
   )
 }
