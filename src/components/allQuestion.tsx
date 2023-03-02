@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import Choice from "./choices";
+import yellowCircle from '../assets/yellowCircle.svg'
+import blueCircle from '../assets/blueCircle.svg'
+
 
 
 
@@ -91,24 +94,27 @@ function AllQuestion({ setGameHandle }: {setGameHandle: () => void}) {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            {questionsList.length === 0 ? (<p>Loading...</p>) :
-            (
-                <>
-                    <div className="max-w-xl z-10">
-                        {choiceElems} 
-                    </div>
-                    <div className="flex items-center">
-                        { isGameEnded && <p className="mr-5">You scored {correctCount}/5 correct answers</p> }
-                        <button onClick={isGameEnded? restart : checkAnswer }
-                        className="my-5 bg-indigoButton p-5 rounded-lg active:opacity-50 w-32 h-9 flex items-center justify-center text-sm text-center text-whiteText">
-                            {(isGameEnded? 'Play again':'check answer')}
-                        </button>
-                    </div>
-                </>
-            )}
-            
-        </div>
+        <>
+         <img src={yellowCircle} alt="Yellow cricle" className='absolute right-0 max-md:hidden'/>
+            <div className="flex flex-col items-center justify-center xl:h-screen">
+                {questionsList.length === 0 ? (<p>Loading...</p>) :
+                (
+                    <>
+                        <div className="w-xl max-sm:w-full z-50">
+                            {choiceElems} 
+                        </div>
+                        <div className="flex items-center">
+                            { isGameEnded && <p className="mr-5">You scored {correctCount}/5 correct answers</p> }
+                            <button onClick={isGameEnded? restart : checkAnswer }
+                            className="my-5 bg-indigoButton p-5 rounded-lg active:opacity-50 w-32 h-9 flex items-center justify-center text-sm text-center text-whiteText">
+                                {(isGameEnded? 'Play again':'check answer')}
+                            </button>
+                        </div>
+                    </>
+                )}
+            </div>
+            <img src={blueCircle} alt="Blue cricle" className='absolute bottom-0 max-md:hidden'/>
+        </>
     )
 }
 
