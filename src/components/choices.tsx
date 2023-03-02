@@ -17,10 +17,10 @@ interface props {
 
 const Choice:FC<props> = (props) => {
 
-    const selectedChoiceClassname = "bg-selectedColor mr-3 rounded-xl px-5 py-2"
-    const unselectedChoiceClassname = "border border-black mr-3 rounded-xl px-5 py-2"
-    const selectedCorrect = "bg-correctGreen px-5 py-2 mr-3 rounded-xl border-none"
-    const selectedIncorrect = "bg-incorrectRed px-5 py-2 mr-3 rounded-xl outline-none"
+    const selectedChoiceClassname = "bg-selectedColor mr-3 rounded-xl px-5 py-2 max-sm:my-2"
+    const unselectedChoiceClassname = "border border-black mr-3 rounded-xl px-5 py-2 max-sm:my-2"
+    const selectedCorrect = "bg-correctGreen px-5 py-2 mr-3 rounded-xl border-none max-sm:my-2"
+    const selectedIncorrect = "bg-incorrectRed px-5 py-2 mr-3 rounded-xl outline-none max-sm:my-2"
 
     const incorrectElems = props.incorrectAnswer.map(incorrectChoice => {
         const incorrectClassname = `
@@ -60,9 +60,9 @@ const Choice:FC<props> = (props) => {
 
     return (
         <>
-            <div className="border-b-2 border-black p-4 ">
+            <div className="border-b-2 border-black p-4 max-sm:mx-0">
                 <p className="font-Karla font-bold text-base decoration-blackIndigo">{decode(props.question)}</p>
-                <div className="flex mt-3 font-Inter font-normal text-xs decoration-blackIndigo rounded-lg">
+                <div className="flex mt-3 font-Inter font-normal text-xs decoration-blackIndigo rounded-lg sm:flex max-sm:flex-col">
                     {choicesArray}
                 </div>
             </div>
