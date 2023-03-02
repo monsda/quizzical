@@ -59,12 +59,14 @@ const Choice:FC<props> = (props) => {
 	);
 
     return (
-        <div className="border-b-2 border-black p-4">
-            <p className="w-96 font-Karla font-bold text-base decoration-blackIndigo z-20">{decode(props.question)}</p>
-            <div className="flex mt-3 font-Inter font-normal text-xs decoration-blackIndigo rounded-lg z-20">
-                {choicesArray}
+        <>
+            <div className="border-b-2 border-black p-4 ">
+                <p className="font-Karla font-bold text-base decoration-blackIndigo">{decode(props.question)}</p>
+                <div className="flex mt-3 font-Inter font-normal text-xs decoration-blackIndigo rounded-lg">
+                    {choicesArray}
+                </div>
             </div>
-        </div>
+        </>
     )
 } 
 
